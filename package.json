@@ -1,0 +1,26 @@
+{
+  "name": "@knora/authentication",
+  "version": "1.0.0-alpha.5",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/animations": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/cdk": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/material": "^6.0.0-rc.0 || ^6.0.0",
+    "@knora/core": "^1.0.0-beta",
+    "moment": "^2.22.2"
+  },
+  "main": "bundles/knora-authentication.umd.js",
+  "module": "fesm5/knora-authentication.js",
+  "es2015": "fesm2015/knora-authentication.js",
+  "esm5": "esm5/knora-authentication.js",
+  "esm2015": "esm2015/knora-authentication.js",
+  "fesm5": "fesm5/knora-authentication.js",
+  "fesm2015": "fesm2015/knora-authentication.js",
+  "typings": "knora-authentication.d.ts",
+  "metadata": "knora-authentication.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}
