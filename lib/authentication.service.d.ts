@@ -16,11 +16,11 @@ export declare class AuthenticationService {
      * login process;
      * it's used by the login component
      *
-     * @param username
+     * @param identifier (email or username)
      * @param password
      * @returns
      */
-    login(username: string, password: string): Observable<any>;
+    login(identifier: string, password: string): Observable<any>;
     logout(): void;
     /**
      * handle request error in case of server error
