@@ -39,11 +39,11 @@ export declare class LoginFormComponent implements OnInit {
         };
     };
     formErrors: {
-        'identifier': string;
+        'email': string;
         'password': string;
     };
     validationMessages: {
-        'identifier': {
+        'email': {
             'required': string;
         };
         'password': {
