@@ -1,28 +1,45 @@
-# Knora-ui authentication
-![npm (scoped)](https://img.shields.io/npm/v/@knora/authentication.svg)
+# Knora-ui authentication module
+[![npm (scoped)](https://img.shields.io/npm/v/@knora/authentication.svg)](https://www.npmjs.com/package/@knora/authentication)
 
-This module is part of [Knora-ui](https://github.com/dhlab-basel/Knora-ui) modules, developed by the team at the [DHLab Basel](http://dhlab.unibas.ch).
+This module is part of [Knora-ui](https://github.com/dhlab-basel/Knora-ui) modules, developed by the team at the [Data and Service Center for Humanities DaSCH](http://dasch.swiss).
 
 The authentication module contains the login form (for standalone usage) or a complete login- / logout-button environment incl. the login form.
 
+## Prerequisites
+For help getting started with a new Angular app, check out the [Angular CLI](https://cli.angular.io/).
+
+For existing apps, follow these steps to begin using Knora-ui authentication.
+
 ## Install
-This module needs the configuration setup from [@knora/core](https://www.npmjs.com/package/@knora/core) which should also be installed.
+You can use either the npm or yarn command-line tool to install packages. Use whichever is appropriate for your project in the examples below.
 
-`$ yarn add @knora/authentication @knora/core moment`
+### Yarn
+`$ yarn add @knora/authentication`
 
-OR
+### NPM
 
-`$ npm install @knora/authentication @knora/core moment`
+`$ npm install @knora/authentication`
+
+### Dependencies
+This module has the following package dependencies, which you also have to install.
+ - @angular/common@6.0.0
+ - @angular/core@6.0.0
+ - @angular/animations@6.0.0
+ - @angular/cdk@6.0.0
+ - @angular/material@6.0.0
+ - @knora/core@6.0.0
+ - moment@2.22.2
+
 
 ## Setup
 In your AppModule you have to define the following providers:
 
-```TypeScript
+```Javascript
 import { ErrorInterceptor, JwtInterceptor, KuiAuthenticationModule } from '@knora/authentication';
 
 @NgModule({
     declarations: [
-    ...
+        ...
     ],
     imports: [
         BrowserModule,
@@ -44,11 +61,11 @@ export class AppModule { }
 ```
 
 
-## Usage
+## Usage of KuiAuthGuard
 
-The @knora/authentication module contains a guard class which will redirect a guest user to the login page. It can be used in the app routing as follow:
+The @knora/authentication module contains a guard class which can be used in a restricted app component and will redirect a guest user to the login page. It can be used in the app routing as follow:
 
-```TypeScript
+```Javascript
 import { AuthGuard } from '@knora/authentication';
 
 const appRoutes: Routes = [
@@ -62,6 +79,9 @@ const appRoutes: Routes = [
         component: LoginFormComponent
     }
 ]
+
 ```
 
-The `LoginFormComponent` needs then only the `<kui-login-form></kui-login-form>` tag. It's also possible to define e navigation route, where the user will be redirected after successful login: `<kui-login-form [navigate]="'/dashboard'"></kui-login-form>`
+## Usage of kui-login-form
+
+The `LoginFormComponent` in the app needs in principle only the `<kui-login-form></kui-login-form>` tag. Additional it's also possible to define e navigation route, where the user will be redirected after successful login: `<kui-login-form [navigate]="'/dashboard'"></kui-login-form>`

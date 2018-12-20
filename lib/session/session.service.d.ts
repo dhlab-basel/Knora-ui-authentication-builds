@@ -20,10 +20,10 @@ export declare class SessionService {
      * @param username
      */
     setSession(jwt: string, username: string): void;
-    private setTimestamp();
+    private setTimestamp;
     getSession(): void;
     updateSession(): void;
     validateSession(): boolean;
-    private authenticate();
+    private authenticate;
     destroySession(): void;
 }

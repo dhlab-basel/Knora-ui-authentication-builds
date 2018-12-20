@@ -10,10 +10,12 @@ export declare class LoginFormComponent implements OnInit {
     private _route;
     private _router;
     /**
-     * navigate to the defined url after login
+     * @param {string} [navigate]
+     * navigate to the defined url after successful login
      */
     navigate?: string;
     /**
+     * @param {string} [color]
      * set your theme color here,
      * it will be used in the progress-indicator
      */
@@ -54,6 +56,8 @@ export declare class LoginFormComponent implements OnInit {
     ngOnInit(): void;
     buildForm(): void;
     /**
+     * @ignore
+     *
      * check for errors while using the form
      * @param data
      */
